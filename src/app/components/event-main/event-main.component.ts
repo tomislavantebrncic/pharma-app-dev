@@ -59,20 +59,22 @@ export class EventMainComponent implements OnInit {
   showDialog = false;
 
   filters = [
+    // {
+    //   field: 'country',
+    //   type: 'select',
+    //   options: []
+    // },
     {
       field: 'country',
-      type: 'select',
-      options: []
+      type: 'containsText'
     },
     {
       field: 'product',
-      type: 'select',
-      options: []
+      type: 'containsText'
     },
     {
       field: 'activity',
-      type: 'select',
-      options: []
+      type: 'containsText'
     },
     {
       field: 'date',
@@ -94,15 +96,15 @@ export class EventMainComponent implements OnInit {
     });
     this.countryService.getAll().subscribe(data => {
       this.countries = data;
-      this.filters[0].options = data;
+      // this.filters[0].options = data;
     });
     this.productService.getAll().subscribe(data => {
       this.products = data;
-      this.filters[1].options = data;
+      // this.filters[1].options = data;
     });
     this.activityService.getAll().subscribe(data => {
       this.activities = data;
-      this.filters[2].options = data;
+      // this.filters[2].options = data;
     });
   }
 

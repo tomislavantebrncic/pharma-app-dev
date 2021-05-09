@@ -1,10 +1,12 @@
+@import 'src/variables.scss';
+
 ::ng-deep .p-datatable .p-datatable-thead > tr > th {
   text-align: center;
 }
 
 .event {
   background-color: lightgrey;
-  color: red;
+  color: black;
   text-align: center !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -13,10 +15,10 @@
 }
 
 .note {
-  background-color: yellow;
-  color: black;
+  background-color: $quaternary-color;
+  color: $primary-color;
   text-align: center;
-
+  font-weight: bold;
 }
 
 :host ::ng-deep .p-multiselect {
