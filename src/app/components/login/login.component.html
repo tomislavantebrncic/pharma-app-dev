@@ -1,0 +1,16 @@
+<div class="login-panel">
+  <div class="p-field">
+    <label for="username" class="login-panel-label">Username: </label>
+    <input id="username" type="username" pInputText [(ngModel)]="username" [ngClass]="{ 'ng-invalid ng-dirty': invalid }" />
+  </div>
+  <div class="p-field">
+    <label for="password" class="login-panel-label">Password: </label>
+    <input id="password" type="password" pInputText [(ngModel)]="password" [ngClass]="{ 'ng-invalid ng-dirty': invalid }"/>
+  </div>
+  <div>
+    <button pButton type="button" label="Login" (click)="login()"></button>
+  </div>
+  <div>
+    <small *ngIf="invalid" id="login-failed" class="p-error">Login failed.</small>
+  </div>
+</div>

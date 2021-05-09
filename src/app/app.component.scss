@@ -1,0 +1,70 @@
+@import 'src/variables.scss';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+}
+
+.app-main {
+  display: flex;
+  height: calc(98vh - 50px);
+}
+
+.app-header {
+  width: 100%;
+  height: 50px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header-app-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.app-header-sign-out {
+  margin-right: 10px;
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+.left-panel {
+  flex: 0 0 15%;
+  background-color: $secondary-color;
+  margin:5px;
+  height: 100%;
+}
+
+.center-panel {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.center-content-app-main {
+  justify-content: center;
+  display: flex;
+  height: calc(98vh - 50px);
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep {
+  .p-panelmenu-header-link {
+    background-color: $primary-color !important;
+    color: $secondary-color !important;
+  }
+
+  .p-menuitem-link-active {
+    background-color: white !important;
+    color: #2196F3 !important;
+    border: solid 1px #2196F3 !important;
+  }
+}
